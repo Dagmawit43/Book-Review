@@ -92,14 +92,7 @@ export default function BookDetail() {
             >
               ✅ Want to Read
             </button>
-            <button
-              onClick={() => setStatus("read")}
-              className={`px-4 py-2 rounded ${
-                status === "read" ? "bg-green-600 text-white" : "bg-gray-200"
-              }`}
-            >
-              📖 Already Read
-            </button>
+            
           </div>
 
           {/* Write Review */}

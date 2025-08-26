@@ -10,7 +10,8 @@ export default function Profile() {
     gender: "Male",
     country: "Country",
     birthday: "DD/MM/YYYY",
-    genres: "Romance, Mystery/Thriller, Fantasy, Science Fiction, +5 More",
+    genres:
+      "Romance, Mystery/Thriller, Fantasy, Science Fiction, +5 More",
   };
 
   const handleLogout = () => {
@@ -21,7 +22,9 @@ export default function Profile() {
   return (
     <div className="bg-[#f5fce6] min-h-screen flex flex-col items-center">
       {/* Top navigation spacing */}
-      <h1 className="text-2xl font-bold text-blue-700 mt-6 mb-4">Profile</h1>
+      <h1 className="text-2xl font-bold text-blue-700 mt-6 mb-4">
+        Profile
+      </h1>
 
       {/* Profile Card */}
       <div className="bg-[#fdfaf3] shadow-md rounded-lg w-11/12 md:w-3/4 p-6 flex flex-col md:flex-row gap-6 items-start">
@@ -55,7 +58,9 @@ export default function Profile() {
 
           {/* Favorite Genres */}
           <p className="text-gray-700">
-            <span className="font-bold text-green-700">Favorite GENRES:</span>{" "}
+            <span className="font-bold text-green-700">
+              Favorite GENRES:
+            </span>{" "}
             {user.genres}
           </p>
 
@@ -63,10 +68,10 @@ export default function Profile() {
           <div className="mt-6">
             <h3 className="font-semibold mb-3">My BookShelves</h3>
             <div className="flex gap-4">
-              <button className="bg-blue-900 text-white px-6 py-2 rounded-md shadow hover:bg-blue-800 transition">
-                Read (64)
-              </button>
-              <button className="bg-blue-900 text-white px-6 py-2 rounded-md shadow hover:bg-blue-800 transition">
+              <button
+                onClick={() => navigate("/want-to-read")}
+                className="bg-blue-900 text-white px-6 py-2 rounded-md shadow hover:bg-blue-800 transition"
+              >
                 Want To Read (89)
               </button>
             </div>
